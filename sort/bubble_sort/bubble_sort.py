@@ -3,18 +3,10 @@
 
 def bubble(list):
     length = len(list)
-    sorted = False
     for x in range(length):
-        if not sorted:
-            break
-
-        min = x
-        for y in range(x, length):
-            if list[y] < list[min]:
-                sorted = False
-                min = y
-        list[x], list[min] = list[min], list[x]
-
+        for y in range(1, length-x):
+            if list[y-1] > list[y]:
+                list[y-1], list[y] = list[y], list[y-1]
     return list
 
 
