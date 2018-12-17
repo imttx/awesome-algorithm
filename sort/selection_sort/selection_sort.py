@@ -5,6 +5,7 @@
 
 
 def selection_sort(list):
+    # 从小到大排序
     for i in range(len(list)):
         min = i
         for j in range(i + 1, len(list)):
