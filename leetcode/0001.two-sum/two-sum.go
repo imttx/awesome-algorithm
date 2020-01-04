@@ -8,8 +8,7 @@ package main
 import "fmt"
 
 func main() {
-
-	nums := []int{2,7,11,15}
+	nums := []int{2, 7, 11, 15}
 	target := 13
 	fmt.Println(twoSum01(nums, target))
 	fmt.Println(twoSum02(nums, target))
@@ -22,9 +21,9 @@ func main() {
 //空间复杂度：O(1)
 func twoSum01(nums []int, target int) []int {
 	l := len(nums)
-	for i := 0; i < l;i++  {
-		for j := i+1;j < l ;j++  {
-			if nums[i]+nums[j] == target{
+	for i := 0; i < l; i++ {
+		for j := i + 1; j < l; j++ {
+			if nums[i]+nums[j] == target {
 				return []int{i, j}
 			}
 		}
@@ -46,7 +45,7 @@ func twoSum02(nums []int, target int) []int {
 	}
 
 	for k, v := range nums {
-		if val, ok := numsHash[target-v]; ok && k != val{
+		if val, ok := numsHash[target-v]; ok && k != val {
 			return []int{k, val}
 		}
 	}
