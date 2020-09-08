@@ -1,7 +1,5 @@
 package leetcode
 
-import "fmt"
-
 func maxSubArray(nums []int) int {
 	if l := len(nums); l == 0 {
 		return 0
@@ -18,7 +16,6 @@ func maxSubArray(nums []int) int {
 		if nums[i] > max {
 			max = nums[i]
 		}
-		fmt.Println(nums, max)
 	}
 	return max
 }
