@@ -11,6 +11,7 @@ func Test_missingNumber(t *testing.T) {
 		args args
 		want int
 	}{
+		{args: args{nums: []int{0, 1, 3}}, want: 2},
 		{args: args{nums: []int{0, 1, 2, 3, 4, 5, 6, 7, 9}}, want: 8},
 	}
 	for _, tt := range tests {

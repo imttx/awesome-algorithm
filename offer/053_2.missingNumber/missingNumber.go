@@ -25,7 +25,7 @@ package offer
 // 缺失的数字等于 “右子数组的首位元素” 对应的索引；因此考虑使用二分法查找 “右子数组的首位元素” 。
 func missingNumber(nums []int) int {
 	i, j := 0, len(nums)-1
-	for i <= j {
+	for i < j {
 		m := (i + j) / 2
 		if nums[m] == m {
 			i = m + 1
