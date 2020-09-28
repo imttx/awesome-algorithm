@@ -68,3 +68,17 @@ func twoSum03(nums []int, target int) []int {
 
 	return nil
 }
+
+func exampleFunc(nums []int, sum int) []int {
+	l, r := 0, len(nums)-1
+	for l < r {
+		if nums[l]+nums[r] > sum {
+			r--
+		} else if nums[l]+nums[r] < sum {
+			l++
+		} else {
+			return []int{l, r}
+		}
+	}
+	return nil
+}
